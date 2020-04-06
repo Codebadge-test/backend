@@ -39,6 +39,9 @@ router.get('/auth',(req,res)=>{
     .then((result)=>{
         const data= result.data;
         var token = querystring.parse(data).access_token
+        return token
+    })
+    .then((token)=>{
         res.header('Access-Control-Allow-Origin','*')
         res.header('Access-Control-Allow-Headers','Origin,X-Requested-With,COntent-Type,Accept');
         res.header("Access-Control-Allow-Credentials",true)
