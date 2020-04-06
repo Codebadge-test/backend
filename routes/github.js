@@ -47,7 +47,7 @@ router.get('/install',(req,res)=>{
 })
 
 router.get('/',(req,res)=>{
-    res.send("hello github")
+    res.redirect(frontend+'/register')
 })
 
 
