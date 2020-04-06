@@ -42,6 +42,7 @@ router.get('/auth',(req,res)=>{
         return token
     })
     .then((token)=>{
+        console.log(token)
         res.header('Access-Control-Allow-Origin','*')
         res.header('Access-Control-Allow-Headers','Origin,X-Requested-With,COntent-Type,Accept');
         res.header("Access-Control-Allow-Credentials",true)
