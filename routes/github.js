@@ -38,7 +38,7 @@ router.get('/auth',(req,res)=>{
         console.log("hit");
         const data= res.data;
         console.log(code)
-        res.cookie('token',code);
+        res.cookie('token',code,{ maxAge: 1000 * 60 * 10, httpOnly: false })
         res.redirect(frontend)
     })
 })
