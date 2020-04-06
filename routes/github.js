@@ -4,7 +4,6 @@ var cookieParser = require('cookie-parser')
 const Trello = require('trello')
 const bodyParser = require('body-parser')
 const request = require('request')
-
 if(process.env.NODE_ENV=="production"){
     var frontend = "https://codebadge-frontend.netlify.com"
     var clientId = "9a3d93461f11673e4164"
@@ -41,6 +40,10 @@ router.get('/auth',(req,res)=>{
         res.cookie('token',code,{ maxAge: 1000 * 60 * 10, httpOnly: false })
         res.redirect(frontend)
     })
+})
+
+router.get('/install',(req,res)=>{
+    res.send("thanks for installing bot")
 })
 
 router.get('/',(req,res)=>{
