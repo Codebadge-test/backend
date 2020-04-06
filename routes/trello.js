@@ -259,4 +259,8 @@ router.get('/addlist',(req,res)=>{
         .catch(error=>res.sendStatus(401))
 })
 
+router.get('/',(req,res)=>{
+    res.send("hello trello")
+})
+
 module.exports = router;

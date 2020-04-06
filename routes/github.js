@@ -39,5 +39,9 @@ router.get('/auth',(req,res)=>{
     })
 })
 
+router.get('/',(req,res)=>{
+    res.send("hello github")
+})
+
 
 module.exports = router
