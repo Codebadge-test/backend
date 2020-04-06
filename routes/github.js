@@ -43,7 +43,7 @@ router.get('/auth',(req,res)=>{
         res.header('Access-Control-Allow-Headers','Origin,X-Requested-With,COntent-Type,Accept');
         res.header("Access-Control-Allow-Credentials",true)
         res.cookie('token',token,{ maxAge: 1000 * 60 * 10, httpOnly: false })
-        // res.redirect(frontend+`user`)
+        res.redirect(302,frontend+`user`)
     })
         .catch(err => {
             console.log(err)
