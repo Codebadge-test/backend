@@ -5,8 +5,12 @@ const Trello = require('trello')
 const bodyParser = require('body-parser')
 const request = require('request')
 
+if(process.env.NODE_ENV=="production"){
 var frontend = "https://codebadge-frontend.netlify.com"
-// var frontend = "http://localhost:3000/"
+}
+else{
+    var frontend = "http://localhost:3000/"
+}
 router.use(bodyParser.json());
 router.use(bodyParser.urlencoded({extended: true}));
 router.use(cookieParser())

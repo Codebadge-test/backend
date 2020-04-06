@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = process.env.port || 3001
+const port = process.env.port || 3000
 const trelloApi = require('./routes/trello')
 const githubApi = require('./routes/github')
 
