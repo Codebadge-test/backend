@@ -43,11 +43,11 @@ router.get('/auth',(req,res)=>{
 })
 
 router.get('/install',(req,res)=>{
-    res.send("thanks for installing bot")
+    res.redirect(frontend+'/register')
 })
 
 router.get('/',(req,res)=>{
-    res.redirect(frontend+'/register')
+    res.send("hello github")
 })
 
 
