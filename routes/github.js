@@ -21,7 +21,7 @@ router.use(bodyParser.urlencoded({extended: true}));
 router.use(cookieParser())
 router.get('/auth',(req,res)=>{
     var {query} = req;
-    console.log(req)
+    // console.log(req)
     var {code} = query;
     console.log(code)
     if(!code){
