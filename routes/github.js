@@ -7,7 +7,7 @@ const request = require('request')
 const axios = require("axios")
 var querystring = require('querystring');
 if(process.env.NODE_ENV=="production"){
-    var frontend = "https://codebadge-frontend.netlify.com"
+    var frontend = "https://codebadge-frontend.netlify.com/"
     var clientId = "9a3d93461f11673e4164"
     var clientSecret = "3c799896323f37a83ebfc0acf208f611540998b4"
 }
